@@ -1,0 +1,255 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*more sort button*/
+
+.more, .sort{
+  margin-left: 85%;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.sort img, .more img{
+  width: 2rem;
+}
+/* Search*/
+
+.search{
+  width: 80%;
+  margin: 1rem auto;
+}
+.search input{
+  font-size: 1.3rem;
+  border: 1px solid black;
+  padding: 0.8rem 1.2rem;
+  width: 100%;
+  border-radius: 2rem;
+}
+.search input:focus{
+  outline: none;
+}
+/*Note*/
+.notes{
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.note{
+  width: 100%;
+  margin: 1rem auto;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.note-title{
+  font-size: 1.3rem;
+}
+.note-time{
+  font-size: 0.7rem;
+}
+.note-tags{
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.note-tags ul{
+  display: flex;
+  list-style: none;
+  font-size: 0.8rem;
+}
+.note-tags ul li{
+  margin-left: 4px;
+  background-color: black;
+  color: white;
+  border-radius: 2rem;
+  padding: 0.3rem;
+}
+.note-tags ul:first-child{
+  margin-left: 0;
+}
+.note-delete{
+  position: absolute;
+  top: 40%;
+  left: 85%;
+  width: 2.4rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+/* Bottom Navigation*/
+
+.navigation{
+  position: fixed;
+  overflow: hidden;
+  bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  left: 10%;
+}
+.navigation img{
+  width: 2.4rem;
+  cursor: pointer;
+}
+
+
+/*Overlay*/
+.overlay{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+}
+/* Add note*/
+
+.add-note{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  top:0;
+  left:0;
+}
+.add-note input{
+  max-width: 800px;
+  width: 90%;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 1rem 1rem 0 0;
+}
+.add-note textarea{
+  width: 90%;
+  max-width: 800px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  resize: none;
+}
+.add-note input:focus, textarea:focus{
+  outline: none;
+}
+.newNote{
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-top: 1px solid black;
+  padding: 0.8rem 0;
+}
+.newNote:active{
+  background-color: #ececec;
+}
+/* tag*/
+.tag-items img{
+  width: 2.5rem;
+  border-radius: 3rem;
+}
+.newTag:active{
+  background-color: #ececec;
+}
+.newTag{
+  max-width: 600px;
+  text-align: center;
+  background-color: white;
+  width: 80%;
+  border-radius: 0 0 1rem 1rem;
+  cursor: pointer;
+  border: none;
+}
+/*cross */
+
+.cross{
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+#cancel{
+  width: 3rem;
+  transform: rotate(45deg);
+  border-radius: 3rem;
+  background-color: white;
+  cursor: pointer;
+}
+/*tag more sort ul*/
+.tag-items ul, .more-items ul, .sort-items ul{
+  width: 80%;
+  max-width: 600px;
+  font-size: 1.4rem;
+  list-style: none;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden
+}
+.tag-items ul{
+  border-radius: 1rem 1rem 0 0;
+}
+.tag-items ul li, .sort-items ul li, .more-items ul li{
+  border-bottom: 1px solid gray;
+  padding: 1rem;
+  cursor: pointer;
+}
+.sort-items ul li:last-child, .more-items ul li:last-child{
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.tag-items ul li:active, .sort-items ul li:active, .more-items ul li:active{
+  background-color: #ececec;
+}
+.more-items, .sort-items, .tag-items{
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  z-index: 1;
+  top:0px;
+  left:0px;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0;
+    display: none;
+  }
+  50% { opacity: 0.5;
+    display: flex;
+  }
+  
+  80% { opacity: 0.8;
+    display: flex;
+  }
+  100% { opacity: 1; 
+    display: flex;
+  }
+}

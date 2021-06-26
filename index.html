@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koron</title>
+  <link rel="stylesheet" href="/css/css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <div id="more-btn" class="more">
+    <img src="/resource/more-vertical.svg" alt="more options">
+  </div>
+  <div class="more-items">
+    <ul>
+      <li>Import / Export</li>
+      <li>Settings</li>
+      <li>About</li>
+    </ul>
+  </div>
+  <div class="search">
+    <input type="search" placeholder="search">
+  </div>
+
+  <div class="sort">
+    <img id="sort-btn" src="/resource/align-right.svg" alt="">
+  </div>
+<div class="sort-items">
+  <ul>
+    <li>Recent</li>
+    <li>Oldest</li>
+  </ul>
+</div>
+
+
+<div class="notes">
+
+  <div class="note">
+    <h3 class="note-title">Title</h3>
+    <p class="note-content"></p>
+    <div class="note-tags">
+    <ul><li>#tag1</li><li>#tag1</li><li>#tag1</li></ul>
+    </div>
+    <p class="note-time">12/12/12</p>
+    <button class="note-delete" onclick="deleteNote()"><img src="/resource/trash-2.svg" alt=""></button>
+  </div>
+</div>
+
+
+  <nav class="navigation">
+    <img id="tag-btn" src="/resource/hash.svg" alt="">
+    <img id="add-btn" src="/resource/plus.svg" alt="">
+    <img id="theme-btn" src="/resource/moon.svg" alt="">
+  </nav>
+<!--
+  <div class="overlay">
+
+  </div>
+-->
+<img src="/resource/cool-background.png" alt="" class="overlay">
+  <div class="add-note">
+    <input id="add-note-input" type="text" placeholder="Title">
+    <textarea name="" id="add-note-text" cols="30" rows="10" placeholder="Enter your text here..."></textarea>
+    <button class="newNote" onclick="addNoteFunc()"><img src="/resource/plus.svg" alt=""></button>
+  </div>
+
+  <div class="tag-items">
+    <ul>
+      <li># tag1</li>
+      <li># tag1</li>
+      <li># tag1</li>
+    </ul>
+      <button class="newTag"><img src="/resource/plus.svg" alt=""></button>
+  </div>
+  <div class="cross">
+    <img id="cancel" src="/resource/plus.svg" alt="" />
+  </div>
+  <script src="/js/js.js"></script>
+</body>
+</html>
