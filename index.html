@@ -16,9 +16,9 @@
   </div>
   <div class="more-items">
     <ul>
-      <li>Import / Export</li>
+      <li id="backup-btn">Import / Export</li>
       <li>Settings</li>
-      <li>About</li>
+      <li id="about-page-btn">About</li>
     </ul>
   </div>
   <div class="search">
@@ -60,11 +60,11 @@
 
   </div>
 -->
-<img src="resource/cool-background.png" alt="" class="overlay">
+  <img src="resource/cool-background.png" alt="" class="overlay">
   <div class="add-note">
     <input id="add-note-input" type="text" placeholder="Title">
     <textarea name="" id="add-note-text" cols="30" rows="10" placeholder="Enter your text here..."></textarea>
-    <button class="newNote" onclick="addNoteFunc()"><img src="resource/plus.svg" alt=""></button>
+    <button class="newNote" id="add-new-note-btn" onclick="addNewNoteFunction()"><img src="resource/plus.svg" alt=""></button>
   </div>
 
   <div class="tag-items">
@@ -78,6 +78,28 @@
   <div class="cross">
     <img id="cancel" src="resource/plus.svg" alt="" />
   </div>
+
+  <div class="about-items">
+    <h3>General</h3>
+    <ul>
+    <li>View the source in github</li>
+    <li>Koron</li>
+    </ul>
+    <h3>Third party attribution</h2>
+    <ul id="about-items-last-li">
+      <li>Icons by Feather icons</li>
+    </ul>
+  </div>
+
+<div class="backup-items">
+    <ul>
+    <li><button id="import-btn">Import</button></li>
+    <li><button id="export-btn">Export</button></li>
+    </ul>
+  </div>
+
+
   <script src="js/js.js"></script>
+  <script src="js/note.js"></script>
 </body>
 </html>

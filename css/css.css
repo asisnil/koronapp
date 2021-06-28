@@ -199,7 +199,7 @@ body{
   cursor: pointer;
 }
 /*tag more sort ul*/
-.tag-items ul, .more-items ul, .sort-items ul{
+.tag-items ul, .more-items ul, .sort-items ul, .about-items ul, .backup-items ul{
   width: 80%;
   max-width: 600px;
   font-size: 1.4rem;
@@ -208,22 +208,34 @@ body{
   border-radius: 1rem;
   overflow: hidden
 }
+.about-items ul{
+  border-radius: 0;
+}
+#about-items-last-li{
+  border-radius: 0 0 1rem 1rem;
+}
 .tag-items ul{
   border-radius: 1rem 1rem 0 0;
 }
-.tag-items ul li, .sort-items ul li, .more-items ul li{
+.tag-items ul li, .sort-items ul li, .more-items ul li, .about-items ul li,.backup-items button{
   border-bottom: 1px solid gray;
   padding: 1rem;
   cursor: pointer;
 }
-.sort-items ul li:last-child, .more-items ul li:last-child{
+
+.sort-items ul li:last-child, .more-items ul li:last-child, .about-items ul li:last-child, .backup-items ul li:last-child{
   border-bottom: none;
   margin-bottom: 0;
 }
-.tag-items ul li:active, .sort-items ul li:active, .more-items ul li:active{
+.tag-items ul li:active,
+.sort-items ul li:active,
+.more-items ul li:active,
+.about-items ul li:active,
+.backup-items button:active
+{
   background-color: #ececec;
 }
-.more-items, .sort-items, .tag-items{
+.more-items, .sort-items, .tag-items, .about-items, .backup-items{
   display: none;
   position: absolute;
   justify-content: center;
@@ -237,6 +249,26 @@ body{
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 0.3s;
+}
+
+/*about items*/
+
+.about-items h3{
+  background-color: white;
+  width: 80%;
+  padding: 1rem;
+}
+.about-items h3:first-of-type{
+  border-radius: 1rem 1rem 0 0;
+}
+.backup-items button{
+  width: 100%;
+  background-color: white;
+  border: none;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+  font-size: 1.1rem;
+  
 }
 @keyframes fadeIn {
   0% { opacity: 0;
