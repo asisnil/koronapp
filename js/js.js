@@ -5,6 +5,7 @@ const tags = document.querySelector(".tag-items");
 const moreItems = document.querySelector(".more-items");
 const aboutItems = document.querySelector(".about-items");
 const backupItems = document.querySelector(".backup-items");
+const nav = document.querySelector(".navigation");
 
 
 const overLay = document.querySelector(".overlay");
@@ -63,4 +64,7 @@ cancel.onclick = function(){
   cross.style.display = "none";
   sortItems.style.display = "none";
   backupItems.style.display = "none";
+};
+if(overLay.style.display === "block"){
+  nav.style.display = "none";
 };

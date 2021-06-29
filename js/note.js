@@ -1,3 +1,8 @@
+function clear() {
+     document.getElementById("add-note-input").value = "";
+     document.getElementById("add-note-text").value = "";
+}
+
 function addNewNoteFunction(){
   /*Selectors*/
   let noteTitleValue = document.getElementById('add-note-input').value;
@@ -26,6 +31,10 @@ function addNewNoteFunction(){
   }
   let noteJson = JSON.stringify(noteObject);
   localStorage.setItem(unique, noteJson);
+  addNote.style.display = "none";
+  overLay.style.display = "none";
+  cross.style.display = "none";
+  clear();
 }
 
 
