@@ -1,4 +1,4 @@
-const body = document.getElementsByTagName("body");
+const body = document.getElementById("bodyId");
 const addNote = document.querySelector(".add-note");
 const sortItems = document.querySelector(".sort-items");
 const tags = document.querySelector(".tag-items");
@@ -64,7 +64,4 @@ cancel.onclick = function(){
   cross.style.display = "none";
   sortItems.style.display = "none";
   backupItems.style.display = "none";
-};
-if(overLay.style.display === "block"){
-  nav.style.display = "none";
 };

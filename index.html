@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
 </head>
-<body>
+<body id="bodyId">
 
   <div id="more-btn" class="more">
     <img src="resource/more-vertical.svg" alt="more options">
@@ -61,9 +61,10 @@
   </div>
 
   <div class="tag-items">
-    <ul>
+    <ul class="tags">
     </ul>
-      <button class="newTag"><img src="resource/plus.svg" alt=""></button>
+    <input type="text" name="" id="new-tag">
+    <button onclick="addNewTag()" class="newTag"><img src="resource/plus.svg" alt=""></button>
   </div>
 
   <div class="cross">
@@ -92,5 +93,6 @@
 
   <script src="js/js.js"></script>
   <script src="js/note.js"></script>
+  <script src="js/tag.js"></script>
 </body>
 </html>

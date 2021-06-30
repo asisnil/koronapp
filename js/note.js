@@ -44,7 +44,10 @@ function getNotesFunction(){
     let i = keys.length;
 
     while ( i-- ) {
-        values.push( localStorage.getItem(keys[i]) );
+        if(keys[i].length<8){
+          continue;
+        }
+        values.push(localStorage.getItem(keys[i]));
     };
   let objValues = values.map(JSON.parse);
   return objValues;
