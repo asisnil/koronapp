@@ -1,6 +1,7 @@
 function clear() {
      document.getElementById("add-note-input").value = "";
      document.getElementById("add-note-text").value = "";
+     document.getElementById("new-tag").value = "";
 }
 
 function addNewNoteFunction(){

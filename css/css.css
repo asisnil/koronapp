@@ -229,9 +229,6 @@ body{
 #about-items-last-li{
   border-radius: 0 0 1rem 1rem;
 }
-.tag-items{
-  overflow: scroll;
-}
 .tag-items ul{
   border-radius: 1rem 1rem 0 0;
 }
@@ -289,8 +286,20 @@ body{
   
 }
 .tags{
-  overflow:scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+}
+.tag-items input{
+  max-width: 600px;
+  padding: 1rem;
+  border: none;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+
+}
+.tag-items input:focus{
+  outline: none;
 }
 @keyframes fadeIn {
   0% { opacity: 0;
