@@ -22,24 +22,28 @@ addBtn.onclick = function() {
   addNote.style.display = "flex";
   overLay.style.display = "block";
   cross.style.display = "flex";
+  body.style.overflow = "hidden";
 };
 tagBtn.onclick = function() {
   tags.style.display = "flex";
   overLay.style.display = "block";
   cross.style.display = "flex";
   tags.style.opacity = "1";
+  body.style.overflow = "hidden";
 };
 moreBtn.onclick = function() {
   moreItems.style.display = "flex";
   overLay.style.display = "block";
   cross.style.display = "flex";
   moreItems.style.opacity = "1";
+  body.style.overflow = "hidden";
 };
 sortBtn.onclick = function() {
   sortItems.style.display = "flex";
   overLay.style.display = "block";
   cross.style.display = "flex";
   sortItems.style.opacity = "1";
+  body.style.overflow = "hidden";
 };
 aboutBtn.onclick = function() {
   aboutItems.style.display = "flex";
@@ -64,4 +68,5 @@ cancel.onclick = function(){
   cross.style.display = "none";
   sortItems.style.display = "none";
   backupItems.style.display = "none";
+  body.style.overflow = "auto";
 };
