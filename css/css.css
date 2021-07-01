@@ -134,11 +134,12 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column; 
-  position: absolute;
-  height: 70%;
+  height: 50%;
+  position: fixed;
   width: 100%;
-  top:0;
+  top: 10%;
   left:0;
+  border: 1px solid red;
 }
 .add-note input{
   max-width: 800px;
@@ -201,7 +202,7 @@ body{
 .cross{
   display: none;
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -255,14 +256,14 @@ body{
 }
 .more-items, .sort-items, .tag-items, .about-items, .backup-items{
   display: none;
-  position: absolute;
+  position: fixed;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 70%;
+  max-height: 50%;
   width: 100%;
   z-index: 1;
-  top:0px;
+  top:20%;
   left:0px;
   opacity: 0;
   animation-name: fadeIn;
