@@ -139,7 +139,6 @@ body{
   width: 100%;
   top: 10%;
   left:0;
-  border: 1px solid red;
 }
 .add-note input{
   max-width: 800px;
@@ -201,7 +200,7 @@ body{
 
 .cross{
   display: none;
-  position: absolute;
+  position: fixed;
   bottom: 15%;
   width: 100%;
   align-items: center;
