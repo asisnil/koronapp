@@ -18,6 +18,7 @@ const addNewTag = () => {
   console.log(realTags);
   let tagsArrayJson = JSON.stringify(realTags);
   localStorage.setItem("tag",tagsArrayJson);
+  window.location.reload();
   clear();
 }
 

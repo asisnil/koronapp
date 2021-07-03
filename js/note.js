@@ -35,6 +35,7 @@ function addNewNoteFunction(){
   addNote.style.display = "none";
   overLay.style.display = "none";
   cross.style.display = "none";
+  window.location.reload();
   clear();
 }
 
@@ -96,7 +97,9 @@ document.querySelector(".notes").addEventListener("click", e => {
   if (!e.target.matches(".note-delete-img")) return;
   let noteValue = (e.target.id);
   if(confirm("delete?")){
-  localStorage.removeItem(noteValue);}
+  localStorage.removeItem(noteValue);
+  window.location.reload();
+  }
 }
 , {
   passive: true
