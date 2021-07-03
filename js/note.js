@@ -95,7 +95,9 @@ displayNotes();
 document.querySelector(".notes").addEventListener("click", e => {
   if (!e.target.matches(".note-delete-img")) return;
   let noteValue = (e.target.id);
-  localStorage.removeItem(noteValue);
-}, {
+  if(confirm("delete?")){
+  localStorage.removeItem(noteValue);}
+}
+, {
   passive: true
 });
