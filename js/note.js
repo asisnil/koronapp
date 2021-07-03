@@ -82,9 +82,10 @@ function displayNotes(){
 
   let noteDl = document.createElement("button");
   noteDl.className = "note-delete";
-  noteDl.id = allNotesArray[i].noteId;
   let noteDlImg = document.createElement("img");
-  noteDlImg.src = "resource7/trash-2.svg";
+  noteDlImg.className = "note-delete-img";
+  noteDlImg.id = allNotesArray[i].noteId;
+  noteDlImg.src = "resource/trash-2.svg";
   noteDl.appendChild(noteDlImg);
   note.appendChild(noteDl);
   }
@@ -92,9 +93,9 @@ function displayNotes(){
 displayNotes();
 
 document.querySelector(".notes").addEventListener("click", e => {
-  if (!e.target.matches(".note-delete")) return;
-  let amfg = (e.target.id);
-  alert(amfg)
+  if (!e.target.matches(".note-delete-img")) return;
+  let noteValue = (e.target.id);
+  localStorage.removeItem(noteValue);
 }, {
   passive: true
 });
