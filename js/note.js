@@ -81,6 +81,10 @@ function displayNotes(){
   noteTi.appendChild(document.createTextNode(allNotesArray[i].noteDate));
   note.appendChild(noteTi);
 
+  let noteEdDl = document.createElement("div");
+  noteEdDl.className = "note-ed-dl-con";
+  note.appendChild(noteEdDl);
+
   let noteDl = document.createElement("button");
   noteDl.className = "note-delete";
   let noteDlImg = document.createElement("img");
@@ -88,7 +92,18 @@ function displayNotes(){
   noteDlImg.id = allNotesArray[i].noteId;
   noteDlImg.src = "resource/trash-2.svg";
   noteDl.appendChild(noteDlImg);
-  note.appendChild(noteDl);
+  noteEdDl.appendChild(noteDl);
+  // note.appendChild(noteDl);
+
+  let noteEd = document.createElement("button");
+  noteEd.className = "note-edit";
+  let noteEdImg = document.createElement("img");
+  noteEdImg.className = "note-edit-img";
+  // noteDlImg.id = allNotesArray[i].noteId;
+  noteEdImg.src = "resource/edit.svg";
+  noteEd.appendChild(noteEdImg);
+  noteEdDl.appendChild(noteEd);
+  // note.appendChild(noteEd);
   }
 }
 displayNotes();
