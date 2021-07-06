@@ -2,10 +2,7 @@ let tagaros = document.querySelector(".tags");
 let addTagBtn = document.querySelector(".newTag");
 let tagListss = [];/* = JSON.parse(localStorage.getItem('tag'));*/
 
-if (localStorage.getItem("tag") === null) {
-  void(0);
-}
-else{
+if (localStorage.getItem("tag") !== null) {
   tagListss = JSON.parse(localStorage.getItem('tag'));
 };
 var tagsArray = [];
@@ -14,12 +11,16 @@ var realTags = tagListss.concat(tagsArray);
 
 const addNewTag = () => {
   let newTagInp = document.getElementById("new-tag").value;
+  if(newTagInp.length !==0){
   realTags.push(newTagInp);
   console.log(realTags);
   let tagsArrayJson = JSON.stringify(realTags);
   localStorage.setItem("tag",tagsArrayJson);
   window.location.reload();
-  clear();
+  clear();}
+  else{
+    alert("Empty!");
+  }
 }
 
 const displayTags = () => {
