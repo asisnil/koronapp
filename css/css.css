@@ -301,6 +301,28 @@ body{
 .tag-items input:focus{
   outline: none;
 }
+.tag-li{
+  position: relative;
+}
+.tag-ed-dl-con{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 5rem;
+}
+.tag-delete, .tag-edit{
+  background-color: var(--dark-wheat);
+  border: none;
+  height: 100%;
+  width: 50%;
+  border-left: 2px solid var(--border);
+}
+.tag-delete img, .tag-edit img{
+  width: 80%;
+}
+
+
 .newTag:active{
   background-color: var(--dark-wheat);
 }
